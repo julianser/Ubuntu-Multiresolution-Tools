@@ -6,9 +6,9 @@ The noun representations can be created by running:
 
     python generate_nouns.py <dialogue_corpus> <tmp_a> <tmp_b> <coarse_representations>
 
-<dialogue_corpus> is a file of consisting of dialogues (one dialogue per line), where turns are separated by the token "__eot__" and utterances are separated by the token "__eou__".
-<tmp_a> and <tmp_b> are temporary intermediate files that the script needs to store. These can safely be deleted afterwards.
-<coarse_representations> is the output file containing of the coarse noun representations.
+where &lt;dialogue_corpus&gt; is a file of consisting of dialogues (one dialogue per line), where turns are separated by the token "__eot__" and utterances are separated by the token "__eou__".
+&lt;tmp_a&gt; and &lt;tmp_b&gt; are temporary intermediate files that the script needs to store. These can safely be deleted afterwards.
+&lt;coarse_representations&gt; is the output file containing of the coarse noun representations.
 
 
 

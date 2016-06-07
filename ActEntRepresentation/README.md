@@ -6,9 +6,9 @@ This directory contains the files for computing the activity-entity metrics as w
 
 ### Python Dependencies
 
-gensim (version 0.11 or newer)
-cPickle (version 1.71 or newer)
-CMU ARK Twitter Part-of-Speech Tagger v0.3.2
+    gensim (version 0.11 or newer)
+    cPickle (version 1.71 or newer)
+    CMU ARK Twitter Part-of-Speech Tagger v0.3.2
 
 ### Model Evaluation
 
@@ -16,8 +16,8 @@ Evaluation is straightforward using the eval_file bash script:
 
     eval_file.sh <model_responses> <output_file>
 
-<model_responses> is a file consisting of model responses (one response per line).
-<output_file> is the output file containing the metric results with 95% confidence intervals.
+&lt;model_responses&gt; is a file consisting of model responses (one response per line).
+&lt;output_file&gt; is the output file containing the metric results with 95% confidence intervals.
 
 
 
@@ -27,9 +27,9 @@ The activity-entity representations can be created by running:
 
     python generate_nouns.py <dialogue_corpus> <tmp_a> <tmp_b> <coarse_representations>
 
-<dialogue_corpus> is a file of consisting of dialogues (one dialogue per line), where turns are separated by the token "__eot__" and utterances are separated by the token "__eou__".
-<tmp_a> and <tmp_b> are temporary intermediate files that the script needs to store. These can safely be deleted afterwards.
-<coarse_representations> is the output file containing of the coarse activity-entity representations.
+where &lt;dialogue_corpus&gt; is a file of consisting of dialogues (one dialogue per line), where turns are separated by the token "__eot__" and utterances are separated by the token "__eou__".
+&lt;tmp_a&gt; and &lt;tmp_b&gt; are temporary intermediate files that the script needs to store. These can safely be deleted afterwards.
+&lt;coarse_representations&gt; is the output file containing of the coarse activity-entity representations.
 
 
 If this is done on a new dataset, make sure that the "__eou__" and "__eot__" token counts match exactly:
