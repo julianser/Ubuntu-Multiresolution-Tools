@@ -1,0 +1,192 @@
+	accepted	agreed	approved
+	activated	enabled	disabled	re-enabled	reenabled	re-disabled	redisabled	allowed
+	added	amplified	appended	enlarged	increased
+	asked	demanded	inquired
+	appointed	assigned	attributed
+	attached
+	backed-up	backuped
+	booted
+	checked	verified
+	chosen	determined	picked	selected
+	cleaned
+	clicked	pressed
+	commented	criticized	debated	discussed	remarked	stated
+	compared	contrasted	differentiated
+	compiled	recompiled	re-compiled
+	compressed	tarred	zipped
+	changed	configured	modified	tweaked	switched	toggled	customized
+	affirmed	confirmed	reaffirmed	validated
+	connected
+	continued	resumed
+	administrated	controlled	directed	managed	supervised
+	copied	cloned
+	broken	collapsed	cracked	crashed	died	failed	frozen	froze	hanged	hung	stalled
+	created	developed
+	cut
+	debugged	inspected
+	deciphered	decoded	decrypted
+	decompressed	unzipped
+	defined	specified
+	described	characterized	detailed	elaborated	explained	illustrated	reported	clarified
+	detached
+	detached
+	deactivated	disabled	disenabled
+	downloaded	redownloaded	re-downloaded
+	adapted	adjusted	altered	edited	refined
+	ejected	emitted	ousted
+	mailed
+	concealed	enciphered	encoded	encrypted	hidden
+	considered	examined	reviewed	studied
+	executed	performed	ran
+	closed	exited	killed	quitted	stopped	shutted	terminated
+	expanded
+	expected
+	exported	shipped
+	discovered	located	searched	uncovered	found	searched	identified
+	corrected	fixed	improved	repaired	tuned	solved	enhanced	resolved
+	folded
+	frozen
+	got	gotten
+	delivered	donated	given	granted	permitted	provided	provisioned
+	gone
+	grabbed
+	hashed
+	imported
+	included	incorporated	inserted	introduced
+	installed	reinstalled	re-installed
+	interrupted	paused	rested	suspended
+	loaded
+	blocked	locked
+	logged	noted
+	loggedin
+	loggedout
+	demoted	downgraded	lowered
+	built	made
+	clocked	measured	monitored	scaled	timed
+	coupled	joined	linked	merged
+	
+	mounted
+	moved
+	navigated
+	opened
+	arranged	categorized	classified	ordered	organized	reorganized
+	partitioned
+	pasted	pastebined	pastebinned
+	patched
+	planned
+	plugged	pluged
+	posted	published	submitted
+	practiced	prepared
+	produced	reproduced
+	pulled
+	purged
+	pushed
+	
+	queried
+	quoted
+	looked	read	saw	examined	skimmed	glanced
+	reattached
+	rebooted
+	received
+	rejected
+	released
+	remade
+	deleted	removed	erased
+	named	renamed
+	replaced
+	requested
+	resetted
+	resized
+	restarted
+	retried
+	returned
+	reverted	undoing	undid
+	rerouted	routed
+	scrolled
+	sent
+	set
+	displayed	shown	showed	listed	viewed	highlighted	prompted	appeared
+	turned-off
+	sized
+	slept
+	sorted
+	split
+	started
+	stored	saved
+	subscribed	registered
+	grabbed	taken
+	said	told	mentioned	spoke	talked	chatted	replied	answered
+	tested
+	transferred	transmitted
+	tried
+	uncommented
+	unexpanded
+	deinstalled	uninstalled
+	unmounted
+	unplugged
+
+	signed-out
+	updated
+	upgraded
+	uploaded
+	used
+	delayed	stayed	waited
+	entered	typed	written	wrote	rewrote	re-wrote	hitted
+	supported
+	prevented
+	lost
+	pointed
+	contained
+	accessed
+	shared
+	bought	paid
+	sold
+	helped	assisted
+	worked
+	muted
+	restricted
+	played
+	called
+	thanked
+	burned
+	adviced	recommended	informed	suggested	proposed	advocated	advised
+	forced
+	repeated
+	streamed
+	responded
+	browsed	surfed
+	scanned
+	restored	recreated	regenerated	generated
+	designed
+	refreshed
+	bundled	packaged
+	implemented
+	programmed	coded
+	computed	calculated
+	touched
+	overheated
+	caused
+	affected
+	swapped
+	formatted
+	rescued
+	zoom	zooms	zooming	magnify	magnifies	magnifying	enlarge	enlarges	enlarging
+	detected
+	dumped	outputted
+	simulated	emulated
+	checked-out
+	unblocked	unlocked
+	documented
+	troubleshooted	troubleshot
+	converted	transformed
+	allocated
+	minimized	shrinked	shrank
+	maximized
+	redirected	forwarded
+	maintained
+	printed	reprinted	re-printed
+	spammed
+	threw	complained
+	synced	synchronized	aligned
+	contacted
+	corrupted	destroyed

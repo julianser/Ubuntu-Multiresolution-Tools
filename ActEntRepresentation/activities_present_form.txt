@@ -1,0 +1,192 @@
+	accept	accepting	accepts	agree	agreeing	agrees	approve	approves	approving
+	activate	activates	activating	enable	enabled	enables	enabling	re-enable	reenable	reenabling	redisable	redisabling	re-disable	allow	allows	allowing
+	add	adding	adds	amplifies	amplify	amplifying	append	appending	appends	enlarge	enlarges	enlarging	increase	increases	increasing
+	ask	asking	asks	demand	demanding	demands	inquire	inquires	inquiring
+	appoint	appointing	appoints	assign	assigning	assigns	attribute	attributes	attributing
+	attach	attaches	attaching
+	backup
+	boot	booting	boots
+	check	checking	checks	verify	verifies	verifying
+	choose	chooses	choosing	determine	determines	determining	pick	picking	picks	select	selecting	selects
+	clean	cleaning	cleans
+	click	clicking	clicks	double-click	middle-click	press	presses	pressing	single-click
+	comment	commenting	comments	criticize	criticizes	criticizing	debate	debates	debating	discuss	discusses	discussing	remark	remarking	remarks	state	states	stating
+	compare	compares	comparing	contrast	contrasting	contrasts	differentiate	differentiates	differentiating
+	compile	compiles	compiling	compilling	recompile	recompiles	recompiling	recompilling	re-compiles	re-compile	re-compiling
+	compress	compresses	compressing	rar	tar	tarring	tars	zip	zipping	zips
+	change	changes	changing	configure	configures	configuring	modifies	modify	modifying	tweak	tweaking	tweaks	switch	switching	switches	toggle	customize	customizes	customizing
+	affirm	affirming	affirms	confirm	confirming	confirms	reaffirm	reaffirming	reaffirms	reconfirm	validate	validates	validating
+	connect	connecting	connects
+	continue	continues	continuing	resume	resumes	resuming	unpause
+	administrate	administrates	administrating	control	controlling	controls	direct	directing	directs	manage	manages	managing	supervise	supervises	supervising
+	copies	copy	copying	clone	clones	cloning
+	break	breaking	breaks	collapse	collapses	collapsing	crack	cracking	cracks	crash	crashes	crashing	die	dies	dying	fail	failing	fails	freeze	freezes	freezing	hang	hangs	hanging	stall	stalls	stalling
+	create	creates	creating	develop	develops	developing	generate	generates	generating
+	cut	cuts	cutting
+	debug	debugging	debugs	inspect	inspecting	inspects
+	decipher	deciphering	deciphers	decode	decodes	decoding	deconceal	decrypt	decrypting	decrypts
+	decompress	decompresses	decompressing	unrar	untar	unzip	unzipping	unzips
+	define	defines	defining	specifies	specify	specifying
+	describe	characterize	characterizes	characterizing	describes	describing	detail	detailing	details	elaborate	elaborates	elaborating	explain	explaining	explains	reexplain	re-explain	illustrate	illustrates	illustrating	report	reporting	reports	clarify	clarifies	clarifying
+	debind	decouple	delink	detach	detaches	detaching	unjoin	unlink
+	deattach	detach	detaches	detaching
+	deactivate	deactivates	deactivating	disable	disables	disabling	disenable	disenables	disenabling
+	download	downloads	downloading	re-download	redownload	dl
+	adapt	adapting	adapts	adjust	adjusting	adjusts	alter	altering	alters	edit	editing	edits	refine	refines	refining
+	eject	ejecting	ejects	emit	emits	emitting	oust	ousting	ousts
+	email	mail	mailing	mails
+	conceal	concealing	conceals	encipher	enciphering	enciphers	encode	encodes	encoding	encrypt	encrypting	encrypts	hide	hides	hiding
+	consider	considering	considers	examine	examines	examining	review	reviewing	reviews	studies	study	studying
+	execute	executes	executing	perform	performing	performs	run	running	runs
+	close	closes	closing	exit	exiting	exits	kill	killing	kills	quit	quits	quitting	stop	stopping	stops	shut	shuts	terminate	terminates	terminating
+	expand	expanding	expands
+	expect	expecting	expects
+	export	exporting	exports	ship	shipping	ships
+	discover	discovering	discovers	find	finds	locate	locates	locating	search	searches	searching	uncover	uncovering	uncovers	identify	identifies	identifying	google	googles	googling
+	correct	correcting	corrects	fine-tune	fix	fixes	fixing	improve	improves	repair	repairing	repairs	tune	tunes	tuning	solve	solves	solving	enhance	enhances	enhancing	resolve	resolves	resolving
+	fold	folding	folds
+	freeze	freezes	freezing	halt
+	get
+	deliver	delivering	delivers	donate	donates	donating	give	gives	giving	grant	granting	grants	permit	permits	permitting	provide	provides	providing	provision	provisioning	provisions
+	go	go-down	go-up	goes	going
+	grab	grabbing	grabs
+	hash	hashes	hashing
+	import	importing	imports
+	include	includes	including	incorporate	incorporates	incorporating	insert	inserting	inserts	introduce	introduces	introducing
+	install	installing	instals	installs	setup	set-up	setup	reinstall	re-install	reinstalls	re-installs	reinstalling	re-installing
+	interrupt	interrupting	interrupts	pause	pauses	pausing	rest	resting	rests	suspend	suspending	suspends
+	load	loading	loads
+	block	blocking	blocks	lock	locking	locks
+	log	logging	logs	note	notes	noting
+	log-in	login	sign-in	relogin
+	log-out	logout	sign-out	relogout
+	demote	demotes	demoting	downgrade	downgrades	downgrading	lower	lowering	lowers
+	build	building	builds	make	makes	making
+	clock	clocking	clocks	measure	measures	measuring	monitor	monitoring	monitors	scale	scales	scaling	time	times	timing
+	bind	couple	couples	coupling	join	joining	joins	link	linking	links	merge	merges	merging
+	more
+	mount	mounting	mounts
+	move	moves	moving
+	navigate	navigates	navigating
+	open	opening	opens
+	arrange	arranges	arranging	catalog	categorize	categorizes	categorizing	classifies	classify	classifying	order	ordering	orders	organize	organizes	organizing	reorder	reorganize	reorganizes	reorganizing
+	partition	partitioning	partitions
+	paste	pastes	pasting	pastebin	pastebins	pastebinning
+	patch	patches	patching
+	plan	planning	plans
+	plug	pluging	plugs
+	post	posting	posts	publish	publishes	publishing	submit	submits	submitting
+	practice	practices	practicing	prepare	prepares	preparing
+	produce	produces	producing	reproduce	reproduces	reproducing
+	pull	pulling	pulls
+	purge	purges	purging
+	push	pushes	pushing
+	put	puts	putting
+	queries	query	querying
+	quote	quotes	quoting
+	look	examine	look-at	looking	looks	read	reading	reads	see	sees	skim	skimming	glance	glances	glancing
+	reattach
+	reboot	reboots
+	receive	receives	receiving
+	reject	rejecting	rejects
+	release	releases	releasing
+	remake	remakes	remaking
+	delete	deletes	deleting	get-rid-of	remove	removes	removing	erase	erases	erasing
+	name	names	naming	rename	renames	renaming
+	replace	replaces	replacing
+	request	requesting	requests
+	reset	resets	resetting
+	resize	resizes	resizing
+	restart	restarts	restarting
+	retry	retries	retrying
+	return	returning	returns
+	revert	reverting	reverts	roll-back	undo	undoes	undoing
+	reroute	reroutes	rerouting	route	routes	routing
+	scroll	scroll-down	scroll-up	scrolling	scrolls
+	send	sending	sends
+	set	sets	setting
+	display	displaying	displays	show	showing	shows	list	lists	listing	view	views	viewing	highlight	highlights	highlighting	prompt	prompts	prompting	appear	appearing	appears
+	shutdown	turnoff	turn-off	shut-down
+	size	sizes	sizing
+	sleep	sleeping	sleeps
+	sort	sorting	sorts
+	split	splits	splitting
+	come-up	start	starting	starts
+	store	stores	storing	save	saves	saving
+	signup	sign-up	subscribe	subscribes	subscribing	register	registeres	registering
+	get-ahold-of	grab	grabbing	grabs	take	takes	taking
+	say	saying	says	tell	telling	tells	mention	mentions	mentioning	speak	speaks	speaking	talk	talks	talking	chat	chats	reply	replies	replying	answer	answers	answering
+	test	testing	tests
+	transfer	transferring	transfers	transmit	transmits	transmitting
+	try	tries	trying
+	uncomment
+	de-expand	unexpand
+	uninstall	deinstall	deinstalling	uninstalling	deinstalls	uninstalls
+	unmount	unmounting
+	unplug	unplugging	unplugs
+	unset
+	sign-out	unsubscribe
+	update	updates	updating
+	upgrade	upgrades	upgrading
+	upload	uploads	uploading
+	use	using	uses
+	delay	delaying	delays	stay	staying	stays	wait	waiting	waits
+	enter	entering	enters	type	types	typing	write	writes	writing	re-write	rewrite	rewrites	rewriting	hit	hits	hitting
+	support	supports	supporting
+	prevent	prevents	preventing
+	loose	loosing	losing
+	point	points	pointing
+	contain	contains	containing
+	access	accesses	accessing
+	share	shares	sharing
+	buy	buys	buying	pay	pays	paying
+	sell	sells	selling
+	help	helps	helping	assist	assists	assisting
+	work	works	working
+	mute	mutes	muting
+	restrict	restricts	restricting
+	play	plays	playing
+	call	calls	calling
+	thank	thanks	thx	thanking	thankyou
+	burn	burns	burning
+	advice	advices	advising	recommend	recommends	recommending	inform	informs	informing	suggest	suggests	suggesting	propose	proposes	proposing	advocate	advocates	advocating	advise	advises	advising
+	force	forces	forcing
+	repeat	repeats	repeating
+	stream	streams	streaming
+	respond	responds	responding
+	browse	browses	browsing	surf	surfs	surfing
+	scan	scans	scanning
+	restore	restores	restoring	recreate	recreates	recreating	regenerate	regenerates	regenerating
+	design	designs	designing
+	refresh	refreshes	refreshing
+	bundle	bundles	bundling
+	implement	implements	implementing
+	programming	coding
+	compute	computes	computing	calculate	calculates	calculated
+	touch	touches	touching
+	overheat	overheates	overheating
+	cause	causes	causing
+	affect	affects	affecting
+	swap	swaps	swapping	swaping
+	format	formats	formatting
+	rescue	rescues	rescuing
+	zoomed	magnified	enlarged
+	detect	detects	detecting
+	dump	dumps	dumping	output	outputs	outputting
+	simulate	simulates	simulation	emulate	emulates	emulation
+	checkout	checkouts	checking-out
+	unblock	unblocks	unblocking	unlock	unlocks	unlocking
+	document	documents	documenting
+	troubleshoot	troubleshoots	troubleshooting
+	convert	converts	converting	transform	transforms	transforming
+	allocate	allocates	allocating
+	minimize	minimizes	minimizing	shrink	shrinks	shrinking
+	maximize	maximizes	maximizing
+	redirect	redirects	redirecting	forward	forwarding	forwards
+	maintain	maintains	maintaining
+	print	prints	printing	reprint	reprints	reprinting	re-print	re-prints	re-printing
+	spam	spams	spamming
+	throw	throws	throwing	complain	complains	complaining
+	sync	syncs	syncing	synchronize	synchronizes	synchronizing	align	aligns	aligning
+	contact	contacts	contacting
+	destroy	destroys	destroying	corrupts	corrupt	corrupting

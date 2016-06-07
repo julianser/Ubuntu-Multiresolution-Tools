@@ -1,0 +1,63 @@
+# combine
+
+import os
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("dialogue_contexts", type=str, default="", help="Dialogues contexts")
+    parser.add_argument("dialogue_true_responses", type=str, default="", help="Dialogue true responses")
+    parser.add_argument("dialogue_responses", type=str, default="", help="Dialogue responses")
+    parser.add_argument("output_dialogues", type=str, default="", help="Dialogue file to write to")
+
+    args = parser.parse_args()
+    return args
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    lines_dialogue_contexts = open(args.dialogue_contexts, 'r').readlines()
+    lines_dialogue_responses = open(args.dialogue_responses, 'r').readlines()
+    lines_dialogue_true_responses = open(args.dialogue_true_responses, 'r').readlines()
+
+
+
+    eou_token = '__eou__'
+
+    assert len(lines_dialogue_contexts) == len(lines_dialogue_responses)
+    assert len(lines_dialogue_contexts) == len(lines_dialogue_true_responses)
+
+    new_lines = []
+
+    for lineidx in range(len(lines_dialogue_responses)):
+        true_response_tokens = lines_dialogue_true_responses[lineidx].split()[0:-1]
+        true_eou_tokens = 1
+        for token in true_response_tokens:
+            if token == eou_token:
+                true_eou_tokens += 1
+ 
+        new_line = lines_dialogue_contexts[lineidx].strip() + ' ' + lines_dialogue_responses[lineidx].strip()
+
+        if true_eou_tokens > 0:
+            for i in range(true_eou_tokens-1):
+                new_line += ' ' + eou_token + ' ' + lines_dialogue_responses[lineidx].strip()
+
+        if new_line.split()[-1] != eou_token:
+            new_line += ' ' + eou_token
+
+        new_line += '\n'
+
+        assert lines_dialogue_contexts[lineidx].strip().split()[-1] == eou_token
+
+        new_line = new_line.replace('</s>', ' ')
+        new_line = new_line.replace('  ', ' ')
+        new_line = new_line.replace('  ', ' ')
+        new_line = new_line.replace('  ', ' ')
+
+        new_lines.append(new_line)
+    
+
+    out = open(args.output_dialogues, 'w')
+    for line in new_lines:
+        out.write(line)
+    out.close()
