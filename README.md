@@ -12,6 +12,7 @@ The pre-processed Ubuntu Dialogue Corpus, noun representations, activity-entity 
 
 The original Ubuntu Dialogue Corpus as released by Lowe et al. (2015) can be found here: http://cs.mcgill.ca/~jpineau/datasets/ubuntu-corpus-1.0/
 
+Unfortunately due to Twitter's terms of service we are not allowed to distribute Twitter content. Therefore we can only make available the tweet IDs, which can then be used with the Twitter API to build a similar dataset. The tweet Ids can be found here: http://www.iulianserban.com/Files/TweetIDs.zip.
 
 
 ### Citation
