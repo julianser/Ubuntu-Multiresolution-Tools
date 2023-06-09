@@ -40,7 +40,7 @@ def word_or_url_or_path(word):
             if '.' in word:
                 return '<url>'
         elif len(word) > 1:
-            if word[0] == '/' and '/' in word[1:len(word)]:
+            if word[0] == '/' and '/' in word[1:]:
                 return '<path>'
 
     return word
@@ -92,10 +92,10 @@ def process_full_turn(turn, current_turn_POSTags = None):
     found_nouns_all_utterances = []
 
     # If POS tags are given, find nouns inside each utterance
-    if not current_turn_POSTags == None:
+    if current_turn_POSTags is not None:
         assert preprocessed_turn in current_turn_POSTags.replace('  ', ' ').replace('  ', ' ')
         current_turn_POSTags_list = current_turn_POSTags.split('\t')[1].split(' ')
-        
+
         retokenized_turn = current_turn_POSTags.split('\t')[0].replace('  ', ' ').replace('  ', ' ').split(' ')
 
         if len(retokenized_turn[-1]) == 0:
@@ -108,28 +108,28 @@ def process_full_turn(turn, current_turn_POSTags = None):
 
         retokenized_utterances = (' '.join(retokenized_turn)).split(end_of_utterance)
 
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[0] == '':
                 del retokenized_utterances[0]
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[-1] == '':
                 del retokenized_utterances[-1]
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[-1] == ' ':
                 del retokenized_utterances[-1]
-        if len(retokenized_utterances) > 0:
-            if retokenized_utterances[-1] == ' ' + end_of_turn:
+        if retokenized_utterances:
+            if retokenized_utterances[-1] == f' {end_of_turn}':
                 del retokenized_utterances[-1]
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[-1] == '':
                 del retokenized_utterances[-1]
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[-1] == ' ':
                 del retokenized_utterances[-1]
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[-1] == ' ':
                 del retokenized_utterances[-1]
-        if len(retokenized_utterances) > 0:
+        if retokenized_utterances:
             if retokenized_utterances[-1] == ' ':
                 del retokenized_utterances[-1]
 
@@ -141,7 +141,7 @@ def process_full_turn(turn, current_turn_POSTags = None):
             if len(retokenized_utterance_list[-1]) == 0:
                 del retokenized_utterance_list[-1]
             if len(retokenized_utterance_list) == 0:
-                assert True==False
+                assert False
             if len(retokenized_utterance_list[0]) == 0:
                 del retokenized_utterance_list[0]
 
@@ -154,10 +154,13 @@ def process_full_turn(turn, current_turn_POSTags = None):
 
             assert len(retokenized_utterance_list) > 1
 
-            utterance_postags_list = []
-            for i in range(curr_postag_idx, curr_postag_idx+len(retokenized_utterance_list)):
-                utterance_postags_list.append(current_turn_POSTags_list[i])
-
+            utterance_postags_list = [
+                current_turn_POSTags_list[i]
+                for i in range(
+                    curr_postag_idx,
+                    curr_postag_idx + len(retokenized_utterance_list),
+                )
+            ]
             curr_postag_idx += len(retokenized_utterance_list)
 
             # Compute time tense
@@ -171,17 +174,17 @@ def process_full_turn(turn, current_turn_POSTags = None):
                 potential_noun = retokenized_utterance_list[POSTag_idx].lower()
                 potential_url_path = word_or_url_or_path(potential_noun)
                 # Add to noun list if it's a path or url
-                if not potential_noun == potential_url_path:
-                    utterance_nouns_list.append(potential_url_path)                    
+                if potential_noun != potential_url_path:
+                    utterance_nouns_list.append(potential_url_path)
                 elif len(POSTag) > 1: # Add to noun list if it has the noun POS tag
-                    if POSTag[0:2] == 'NN':
-                        if not potential_noun == command_placeholder:
-                            if not potential_noun == end_of_turn:
-                                if not potential_noun == end_of_utterance:
-                                    if not potential_noun in stopwords:
+                    if POSTag[:2] == 'NN':
+                        if potential_noun != command_placeholder:
+                            if potential_noun != end_of_turn:
+                                if potential_noun != end_of_utterance:
+                                    if potential_noun not in stopwords:
                                         utterance_nouns_list.append(shorten_noun(potential_noun))
 
-            if len(utterance_nouns_list) == 0:
+            if not utterance_nouns_list:
                 utterance_nouns_list = ['no_nouns']
 
             found_nouns_all_utterances.append(utterance_nouns_list)
@@ -368,8 +371,7 @@ def parse_args():
 
     parser.add_argument("output_nouns", type=str, default="", help="Output file containing dialogue noun representations")
 
-    args = parser.parse_args()
-    return args
+    return parser.parse_args()
 
 if __name__ == "__main__":
     args = parse_args()

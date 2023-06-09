@@ -30,12 +30,12 @@ activities_past_dict = {}
 
 activities_present_list = []
 
-for line_idx, line in enumerate(open('activities_present_form.txt', 'r').readlines()):
-    words = line.strip().lower().replace('-', '').split()
-    first_word = words[0]
-    activities_present_list.append(first_word)
-    for word in words:
-        activities_present_dict[word] = first_word
+for line in open('activities_present_form.txt', 'r'):
+   words = line.strip().lower().replace('-', '').split()
+   first_word = words[0]
+   activities_present_list.append(first_word)
+   for word in words:
+       activities_present_dict[word] = first_word
 
 for line_idx, line in enumerate(open('activities_past_form.txt', 'r').readlines()):
     words = line.strip().lower().replace('-', '').split()
@@ -54,24 +54,26 @@ for line_idx, line in enumerate(open('activities_past_form.txt', 'r').readlines(
 # 3) is contained among the 20K most frequent words.
 #
 # This procedure has very high precision.
-for activity_key in activities_present_dict.keys():
-    if activity_key in w2v:
-        similar_words = w2v.most_similar(activity_key)
-        for similar_word in similar_words:
-            if (not similar_word[0] in activities_present_dict) and (not similar_word[0] in activities_past_dict):
-                if similar_word[0] in edits1(activity_key):
-                    if w2v.similarity(similar_word[0], activity_key) > 0.5:
-                        activities_present_dict[similar_word[0]] = activities_present_dict[activity_key]
+for activity_key in activities_present_dict:
+   if activity_key in w2v:
+      similar_words = w2v.most_similar(activity_key)
+      for similar_word in similar_words:
+         if (similar_word[0] not in activities_present_dict
+             and similar_word[0] not in activities_past_dict):
+            if similar_word[0] in edits1(activity_key):
+                if w2v.similarity(similar_word[0], activity_key) > 0.5:
+                    activities_present_dict[similar_word[0]] = activities_present_dict[activity_key]
 
 
-for activity_key in activities_past_dict.keys():
-    if activity_key in w2v:
-        similar_words = w2v.most_similar(activity_key)
-        for similar_word in similar_words:
-            if (not similar_word[0] in activities_present_dict) and (not similar_word[0] in activities_past_dict):
-                if similar_word[0] in edits1(activity_key):
-                    if w2v.similarity(similar_word[0], activity_key) > 0.5:
-                        activities_past_dict[similar_word[0]] = activities_past_dict[activity_key]
+for activity_key in activities_past_dict:
+   if activity_key in w2v:
+      similar_words = w2v.most_similar(activity_key)
+      for similar_word in similar_words:
+         if (similar_word[0] not in activities_present_dict
+             and similar_word[0] not in activities_past_dict):
+            if similar_word[0] in edits1(activity_key):
+                if w2v.similarity(similar_word[0], activity_key) > 0.5:
+                    activities_past_dict[similar_word[0]] = activities_past_dict[activity_key]
 
 # Load commands
 all_commands = open('commands_all.txt', "r").readlines()
@@ -98,47 +100,46 @@ def flatten_list(l):
 
 # Helper function to map word -> entity
 def word_to_entity(word):
-    if len(word) > 0:
-        if word in unigram2entity:
-            return unigram2entity[word]
-        if word.title() in unigram2entity:
-            return unigram2entity[word.title()]
-        if word.lower() in unigram2entity:
-            return unigram2entity[word.lower()]
-        if word.upper() in unigram2entity:
-            return unigram2entity[word.upper()]
-        if word.replace('.', '').lower() in unigram2entity:
-            return unigram2entity[word.replace('.', '').lower()]
-        if ('http' in word) or ('www.' in word) or ('.com'  in word) or ('.net' in word) or ('.org' in word) or ('.edu' in word):
-            if '.' in word:
-                return '<url>'
+   if len(word) > 0:
+      if word in unigram2entity:
+          return unigram2entity[word]
+      if word.title() in unigram2entity:
+          return unigram2entity[word.title()]
+      if word.lower() in unigram2entity:
+          return unigram2entity[word.lower()]
+      if word.upper() in unigram2entity:
+          return unigram2entity[word.upper()]
+      if word.replace('.', '').lower() in unigram2entity:
+          return unigram2entity[word.replace('.', '').lower()]
+      if ('http' in word) or ('www.' in word) or ('.com'  in word) or ('.net' in word) or ('.org' in word) or ('.edu' in word):
+          if '.' in word:
+              return '<url>'
 
-        if len(word) > 1:
-            if word[0] == '/' and '/' in word[1:len(word)]:
-                return '<path>'
+      if len(word) > 1:
+         if word[0] == '/' and '/' in word[1:]:
+            return '<path>'
 
-        if '-' in word:
-            first_subword = word.split('-')[0]
-            if len(first_subword) >= 4:
-                return word_to_entity(first_subword)
-        else:
-            if not word[0] == '\\' and not word[-1] == '\\':
-                if not word[0] == '/' and not word[-1] == '/':
-                    if '/' in word:
-                        first_subword = word.split('/')[0]
-                        if len(first_subword) >= 4:
-                            return word_to_entity(first_subword)
-                    elif '\\' in word:
-                        first_subword = word.split('\\')[0]
-                        if len(first_subword) >= 4:
-                            return word_to_entity(first_subword)
+      if '-' in word:
+         first_subword = word.split('-')[0]
+         if len(first_subword) >= 4:
+             return word_to_entity(first_subword)
+      elif word[0] != '\\' and word[-1] != '\\':
+         if word[0] != '/' and word[-1] != '/':
+            if '/' in word:
+                first_subword = word.split('/')[0]
+                if len(first_subword) >= 4:
+                    return word_to_entity(first_subword)
+            elif '\\' in word:
+                first_subword = word.split('\\')[0]
+                if len(first_subword) >= 4:
+                    return word_to_entity(first_subword)
 
-        if len(word) > 3:
-            if word[-1].isdigit():
-                return word_to_entity(word[0:len(word)-1])
+      if len(word) > 3:
+         if word[-1].isdigit():
+            return word_to_entity(word[:-1])
 
 
-    return None
+   return None
 
 # Helper function to determine tense of an utterance given its POS tags
 def determine_tense_input(text_POSTags):
@@ -168,8 +169,8 @@ end_of_turn = '__eot__'
 end_of_utterance = '__eou__'
 
 
-assert word_to_entity(entity_placeholder) == None
-assert word_to_entity(command_placeholder) == None
+assert word_to_entity(entity_placeholder) is None
+assert word_to_entity(command_placeholder) is None
 
 
 
